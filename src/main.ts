@@ -8,5 +8,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(AppModule) // boot strap starts angular application by passing AppModule , look line 4 and and line no 17 in the app.module.ts file
   .catch(err => console.error(err));

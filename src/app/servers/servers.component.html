@@ -1,0 +1,22 @@
+<label> Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" [(ngModel)]="ServerName"> 
+<!-- $event: to fetch the event data ffrom event -->
+<!-- [(ngModel)]: two-way data binding -->
+<button class="btn btn-primary" (click)="onCreateServer()"> Create Server</button>
+<!-- <p>{{ServerName}}</p> -->
+<!-- ngif directive -->
+<!-- when value of ServerCreated is false this parargaph tag will not will in the html document -->
+<p *ngIf="ServerCreated; else noServer"> Server was created, server name is {{ServerName}} </p> 
+<ng-template #noServer>
+    <p>No Server Was Created</p>
+</ng-template>
+<button class="btn btn-primary" [disabled]="!allowNewServer">Allow me</button>  
+<!-- property binding: disabled is dynamic her
+here this property is boolen but it can have other types of value -->
+<p>{{allowNewServer}}</p>
+<p [innerText]="stringIntUsingPB"></p> 
+<!-- string interpolation using property binding -->
+<!-- event binding -->
+<button class="btn btn-danger" (click)="getServerUpdate()">{{ButtonValue}}</button>
+<p>{{serverUpdate}}</p>
+<h3> I am from servers component</h3>
