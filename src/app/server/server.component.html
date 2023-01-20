@@ -1,4 +1,12 @@
-<h2>{{'Server'}} Id is: {{ServerId}} Server Status: {{getServerStatus()}} </h2>
+<!-- ngStyle is the directive name excluding [] brace
+[] means we want to bind some property in this directive
+property bind and directive is not same  
+ngStyle expects javascript property 
+ngStyle: change css style
+ngClass : dynamiclly add or remove css , must bind property
+-->
+
+<p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: ServerStatus === 'online'}">{{'Server'}} Id is: {{ServerId}} Server Status: {{getServerStatus()}} </p>
 
 <!-- string interpolation contain: typescript expression 
  must return string: if the value is number it converts into string 
