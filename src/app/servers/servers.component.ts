@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: '[app-servers]', // element as an attribute
+  selector: '[app-servers]', // this [app-servers] component will be used as an attribute directive in in template
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
@@ -47,6 +47,7 @@ export class ServersComponent implements OnInit {
     this.ServerName = event.target.value;
     
   }
+  // during the instantiation this lifecycle hook will be executed
   ngOnInit(): void {
   }
 
