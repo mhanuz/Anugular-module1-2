@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({ // Appcomponent Decorator
   selector: 'app-root', //css selector: how the compoent used in template, here app-root will be used as an  element in the template.
+  // this selector tells the angular, you can instantiate the component as a tag in your template as much you want. 
   templateUrl: './app.component.html', // html template: how the template  will be rendered
 
 // inline html
