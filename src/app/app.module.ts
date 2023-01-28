@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common'; // to import basic directives or pipes like NgIf,ngFor, uppercase
+import { NgModule } from '@angular/core'; // extend application and configure the application
+import { FormsModule } from '@angular/forms'; // allow forms in html page also isolate
+import { BrowserModule } from '@angular/platform-browser'; // helps lunching and running the application
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component'; //omit the dot notation 
@@ -16,13 +16,12 @@ import { ServersComponent } from './servers/servers.component';
     BrowserComponent,
     ServersComponent,
   ],
-  imports: [
+  imports: [ // import necessary classes for component template
     BrowserModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent,BrowserComponent,ServerComponent] // list the component, should know the angular
-  // angular start the main.ts file first and bootstrap pass app component as an argument
-  // bootstrap will work for AppComponent
+  providers: [], // contains the service list, the services can be used globaly
+  bootstrap: [AppComponent,BrowserComponent,ServerComponent] //component registration for bootstrap: which components will be provided bootstrap
+  // angular start the main.ts file first and bootstrap passes components as an argument
 })
 export class AppModule { }
