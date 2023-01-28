@@ -1,16 +1,15 @@
-import { Component } from "@angular/core"; // Component imported from angular core functionality 
-
-//decorator: typescript feature 
-@Component({ // metadata for this class
-    selector: '[app-server]',  // name should be unique, this component will be used in html 
-    templateUrl: "./server.component.html",   // html source 
-    styles:[`
-    .online{
-        color: pink;
+import { Component } from "@angular/core"; // @: means this is npm feature, @scope_name/package_name;
+//decorator is a function, store meta data about class, method and property
+@Component({ //  class decorator
+    selector: '[app-server]',  // will be used as attribute directive in template
+    templateUrl: "./server.component.html",   // external html source 
+    styles:[`         
+    .online{  
+        color: pink;        // internal css 
     }
     `]
 }) 
-// export: it can be accessed from outside
+// export: it can be impoted from another component
 export class ServerComponent { // class name should follow the convention: Component Name and Description 
     ServerId: number = 10;
     ServerStatus: string = "Offline";
