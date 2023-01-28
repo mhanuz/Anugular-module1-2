@@ -16,5 +16,5 @@ import { Component } from '@angular/core';
 
   // styles:[` h1{ color: pink; background-color: yellow;}`] // inline css
  })
-export class AppComponent {
+export class AppComponent { // class component Handles data and functionality
 }
